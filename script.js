@@ -24,11 +24,13 @@ printButton.addEventListener("click", formDate);
 
 
 function done() {
-    for (let key of storedText) {
+    document.getElementById('txt').innerHTML = storedText;
+/*    for (let key of storedText) {
         const url = "img/2020/07/09/"+ key;
         let png = document.getElementById("png").src = url;
         let result = key.link(png);
         document.getElementById('txt').innerHTML = result;
-    }
-
+    }*/
 }
+
+
