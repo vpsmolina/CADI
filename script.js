@@ -12,10 +12,11 @@ function formDate(e) {
 let printButton = document.formDate.print;
 printButton.addEventListener("click", formDate);
 
-function getText() {
+
+/*function getText() {
     let request = new XMLHttpRequest();
 
-    request.open('GET', "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/2020/07/09/filenames.txt", true);
+    request.open('GET', "img/2020/07/09/filenames.txt", true);
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
@@ -30,16 +31,15 @@ function getText() {
 function populateTables() {
 
     let outer_text = getText();
-    /*outer_text = outer_text.split('\n');*/
-    console.log(outer_text);
-    /*let text = document.getElementById("txt").textContent = outer_text;*/
-}
+    outer_text = outer_text.split('\n');
+    /!*console.log(outer_text);*!/
+    let text = document.getElementById("txt").textContent = outer_text;
+}*/
 
-populateTables();
 
-/*
-var url = 'https://ip-2-165.unn.ru:3389/cadi/CADIDATA/2020/07/09/filenames.txt';
-var storedText;
+
+let url = 'img/2020/07/09/filenames.txt';
+let storedText;
 
 fetch(url)
     .then(function(response) {
@@ -50,5 +50,5 @@ fetch(url)
     });
 
 function done() {
-    /!*document.getElementById('txt').textContent = storedText;*!/
-}*/
+    document.getElementById('txt').textContent = storedText;
+}
