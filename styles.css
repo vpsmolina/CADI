@@ -9,16 +9,16 @@ body {
     height: 100%;
     margin: 0;
 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sansSerif, "Apple Color Emogji", "Segoe UI Emoji";
+    font-family: Arial, sansSerif;
     color: #000000;
+    font-size: 16px;
     line-height: 1.5;
 }
 .header {
     background-color: white;
     display: flex;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 20px;
     justify-content: space-between;
     align-items: center;
 
@@ -38,13 +38,13 @@ body {
     flex-direction: row;
     flex: 1 0 auto;
 
-    margin: 10px;
+    margin: 10px 20px;
 }
 .content {
     position: relative;
     width: 70%;
     padding: 0 40px;
-    margin-left: 10px;
+
     box-shadow: 0 0 25px rgba(0, 0, 0, .05);
     background-color: white;
 }
@@ -54,6 +54,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    margin-right: 20px;
 
     box-shadow: 0 0 25px rgba(0, 0, 0, .05);
     background-color: white;
@@ -61,28 +62,37 @@ body {
 }
 .footer {
     flex: 0 0 auto;
-    margin: 5px 10px;
+    margin: 5px 20px;
 }
-.form {
+.aside-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
 }
 .btn {
     display: inline-block;
     vertical-align: top;
-    padding: 10px;
-    width: 50%;
-    margin: 10px 0;
+    padding: 5px 20px;
+    margin-left: 10px;
 
-    background: #7a7a7a;
+    background: #bc1423;
     border: 0;
     border-radius: 5px;
 
     font-family: inherit;
     font-size: 15px;
-    line-height: 1.1;
+    line-height: 1.5;
     font-weight: 400;
-    color: black;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
 
@@ -92,5 +102,5 @@ body {
 }
 .btn:hover {
      color: white;
-     background-color: #ff9637;
+     background-color: #ff2513;
  }
