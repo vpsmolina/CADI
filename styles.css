@@ -44,8 +44,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    flex-basis: auto;
+    justify-content: space-around;
 
     width: 80%;
     padding: 0 40px;
@@ -54,7 +53,9 @@ body {
     background-color: white;
 }
 .content-arrow {
-
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 .aside {
     width: 20%;
