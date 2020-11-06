@@ -6,10 +6,13 @@ function formDate() {
     let cDate = new Date(elem);
     let year = cDate.getFullYear();
     let month = cDate.getMonth() + 1;
+    if (month < 10) month = "0" + month;
     let day = cDate.getDate();
-    pngUrl = "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/"+ year + "/0" + month+ "/0" + day+ "/";
+    if (day < 10) day = "0" + day;
+    pngUrl = "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/"+ year + "/" + month+ "/" + day+ "/";
+    /*pngUrl = "./cadi/CADIDATA/"+ year + "/0" + month+ "/0" + day+ "/";*/
     /*return document.getElementById("png").src = url;*/
-    let url = "img/"+ year + "/0" + month+ "/0" + day+ "/filenames.txt";
+    let url = "img/"+ year + "/" + month+ "/" + day+ "/filenames.txt";
 
     fetch(url)
         .then(function(response) {
@@ -33,7 +36,6 @@ function done() {
         let result = index.link(url);
         document.getElementsByClassName('aside-list')[0].innerHTML += result;
     });
-    console.log(list);
 }
 
 
