@@ -52,15 +52,20 @@ body {
     box-shadow: 0 0 25px rgba(0, 0, 0, .05);
     background-color: white;
 }
-.content-arrow {
+.content-item {
     display: inline-flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
+}
+.content-arrow {
+    padding-top: 200px;
+    /*align-items: center;*/
 }
 .aside {
     width: 20%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 10px;
     margin-right: 20px;
 
@@ -76,20 +81,47 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5px;
 }
 
-.aside-list {
-    display: flex;
-    flex-direction: column;
+.aside-btn {
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 5px 10px 5px 10px;
 
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px currentColor;
+    border-radius: 4px;
+    padding: 5px 20px;
+    color: #bc1423;
+    background-color: white;
+    /*border-color: currentColor;*/
+
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    cursor: pointer;
+    outline: none;
+
+    transition: background .1s linear, color .1s linear;
+}
+.aside-btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+.aside-btn:hover,
+.aside-btn:focus {
+    color: white;
+    border-color: currentColor;
+    background-color: #bc1423;
 }
 .btn {
     display: inline-block;
     vertical-align: top;
-    padding: 5px 20px;
+    padding: 5px 15px;
     margin-left: 10px;
 
     background: #bc1423;
@@ -117,5 +149,5 @@ body {
     height: 40px;
     stroke-width: 0;
     stroke: currentColor;
-    fill: #ADB9CA;
+    fill: #dddddd;
 }
