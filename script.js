@@ -10,7 +10,7 @@ function formDate() {
     let day = cDate.getDate();
     if (day < 10) day = "0" + day;
     /*pngUrl = "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/"+ year + "/" + month+ "/" + day+ "/";*/
-    pngUrl = "./cadi/CADIDATA/"+ year + "/" + month+ "/" + day+ "/";
+    pngUrl = "./CADIDATA/"+ year + "/" + month+ "/" + day+ "/";
     /*return document.getElementById("png").src = url;*/
     let url = "CADIDATA/"+ year + "/" + month+ "/" + day+ "/filenames.txt";
 
@@ -52,7 +52,6 @@ function done() {
 /*document.getElementsByClassName('content-arrow').addEventListener("click", function () {
     document.getElementById("png").src = url;
 });*/
-
 const latest = "./latest.png";
 
 const xhr = new XMLHttpRequest();
