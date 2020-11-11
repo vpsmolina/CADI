@@ -9,8 +9,8 @@ function formDate() {
     if (month < 10) month = "0" + month;
     let day = cDate.getDate();
     if (day < 10) day = "0" + day;
-    pngUrl = "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/"+ year + "/" + month+ "/" + day+ "/";
-    /*pngUrl = "./CADIDATA/"+ year + "/" + month+ "/" + day+ "/";*/
+    /*pngUrl = "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/"+ year + "/" + month+ "/" + day+ "/";*/
+    pngUrl = "./CADIDATA/"+ year + "/" + month+ "/" + day+ "/";
     /*return document.getElementById("png").src = url;*/
     let url = "CADIDATA/"+ year + "/" + month+ "/" + day+ "/filenames.txt";
 
@@ -55,7 +55,7 @@ function done() {
 /*document.getElementsByClassName('content-arrow').addEventListener("click", function () {
     document.getElementById("png").src = url;
 });*/
-/*const latest = "./latest.png";
+const latest = "./latest.png";
 
 const xhr = new XMLHttpRequest();
 
@@ -63,4 +63,4 @@ xhr.open('GET', latest);
 
 xhr.send();
 
-document.getElementById("png").src = latest;*/
+document.getElementById("png").src = latest;
