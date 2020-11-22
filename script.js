@@ -4,15 +4,15 @@ let list = [];
 let listAside = [];
 let prev;
 let asideList;
+let asideP = document.getElementById("aside");
 
-/*const latest = "./latest.png";
+const latest = "./latest.png";
 const xhr = new XMLHttpRequest();
 xhr.open('GET', latest);
 xhr.send();
-document.getElementById("png").src = latest;*/
+document.getElementById("png").src = latest;
 
 document.formDate.print.addEventListener("click", checkList);
-
 
 document.getElementsByClassName('prev')[0].addEventListener("click", function () {
     prev = document.getElementById("png").src;
@@ -28,6 +28,11 @@ document.getElementsByClassName('next')[0].addEventListener("click", function ()
     });
 });
 
+function checkList() {
+    if (asideList) {
+        asideP.innerHTML = '';
+    } formDate();
+}
 function formDate() {
     let keyDate = document.formDate.date;
     let elem = keyDate.value;
@@ -36,8 +41,8 @@ function formDate() {
     const month = (cDate.getMonth() + 1) < 10 ? `0${cDate.getMonth() + 1}` : `${cDate.getMonth() + 1}`;
     const day = (cDate.getDate()) < 10 ? `0${cDate.getDate()}` : `${cDate.getDate()}`;
     const baseUrl = `CADIDATA/${year}/${month}/${day}/`;
-    pngUrl = "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/"+ year + "/" + month+ "/" + day+ "/";
-    /*pngUrl = `./${baseUrl}`;*/
+    /*pngUrl = "https://ip-2-165.unn.ru:3389/cadi/CADIDATA/"+ year + "/" + month+ "/" + day+ "/";*/
+    pngUrl = `./${baseUrl}`;
     let url = `${baseUrl}filenames.txt`;
 
 
@@ -45,8 +50,8 @@ function formDate() {
         .then(function(response) {
             if(response.ok) {
                 response.text().then(function(text) {
-                    storedText = text.split('\r\n');
-                   /* storedText = text.split('\n');*/
+                    /*storedText = text.split('\r\n');*/
+                    storedText = text.split('\n');
 
                     done();
                 });
@@ -54,7 +59,7 @@ function formDate() {
         });
 }
 
-function done(event) {
+function done() {
     storedText.forEach((item, index, arr) => {
         if (item !== "") {
             listAside[index] = item;
@@ -71,23 +76,11 @@ function done(event) {
                 document.getElementById("png").src = url;
                 prev = event.currentTarget.previousElementSibling.innerHTML;
             }
-
-            aside.append(asideList);
-
+            asideP.append(asideList);
         }
     });
 }
 
-function checkList() {
-    if (asideList) {
-        let asideP = document.getElementById("aside");
-        console.log(asideP.children);
-        asideP.innerHTML = '';
-        console.log(asideP.children);
-        /*document.location.reload();*/
-        formDate();
-    } else {
-        console.log("noo");
-        formDate();
-    }
+function startPage() {
+    document.location.reload();
 }

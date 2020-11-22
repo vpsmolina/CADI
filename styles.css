@@ -27,12 +27,30 @@ body {
     box-shadow: silver;
 }
 .header__logo {
-     font-size: 40px;
-     font-weight: 800;
-     padding-left: 20px;
-     text-decoration: none;
-     color: black;
+    font-size: 40px;
+    font-weight: 800;
+    padding-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
  }
+.header__logo:hover {
+    color: #bc1423;
+}
+.header__logo-title {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 65px;
+    z-index: 1;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.header__logo:hover+div {
+    display: block;
+}
 .main {
     display: flex;
     flex-direction: row;
