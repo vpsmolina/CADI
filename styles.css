@@ -199,3 +199,7 @@ body {
     flex: 0 0 auto;
     margin: 5px 20px;
 }
+.err-filenames {
+    font-size: 18px;
+    margin: 10px;
+}
